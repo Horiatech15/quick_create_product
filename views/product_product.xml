@@ -12,17 +12,41 @@
         </field>
     </record>
 
-    <record id="product_template_kanban_view_inherit" model="ir.ui.view">
-        <field name="name">product.template.product.kanban.inherit</field>
+    <record id="product_template_kanban_view_inherit11" model="ir.ui.view">
+        <field name="name">product.template.product.kanban.inherit11</field>
         <field name="model">product.template</field>
         <field name="inherit_id" ref="product.product_template_kanban_view"/>
         <field name="arch" type="xml">
             <xpath expr="//kanban" position="attributes">
                 <attribute name="js_class">button_in_kanban</attribute>
             </xpath>
+
+            <field name="image_128" position="after">
+                  <button title="Quick edit"
+                          name="action_quick_edit_product"
+                          icon="fa-eye"
+                          type="object"/>
+
+            </field>
+
+
         </field>
     </record>
 
-<!--    product.product_product_view_form_normalized-->
+
+    <record id="product_product_view_form_normalized_inherit" model="ir.ui.view">
+        <field name="name">product.template.product.normalized.form.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_product_view_form_normalized"/>
+        <field name="arch" type="xml">
+           <field name="list_price" position="after">
+               <field name="standard_price" class="oe_inline" widget="monetary"
+                      options="{'currency_field': 'currency_id', 'field_digits': True}"/>
+           </field>
+
+
+        </field>
+    </record>
+
 
 </odoo>

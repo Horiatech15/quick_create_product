@@ -12,7 +12,7 @@ export class CustomListController extends ListController {
 
        this.actionService.doAction({
           type: 'ir.actions.act_window',
-          res_model: 'product.product',
+          res_model: 'product.template',
           name:'Quick Create',
           view_mode: 'form',
           view_type: 'form',
