@@ -4,7 +4,7 @@
     'version': '18.0.0.1',
     'category': 'stock/stock',
     'description': """ Quick Create Product in Stock """,
-    'depends': ['stock', 'base'],
+    'depends': ['stock', 'base', 'website_sale'],
 
     'data': [
 

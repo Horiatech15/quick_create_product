@@ -43,8 +43,9 @@
                <field name="standard_price" class="oe_inline" widget="monetary"
                       options="{'currency_field': 'currency_id', 'field_digits': True}"/>
            </field>
-
-
+            <div name="tax_info" position="after">
+                <field name="is_published"/>
+           </div>
         </field>
     </record>
 
